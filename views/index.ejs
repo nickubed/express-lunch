@@ -1,9 +1,11 @@
-<h2><%= response.quote %></h2>
-
+<div class="kanyeQuote">
+    <h2><%= response.quote %></h2>
+    <p> - Kanye West</p>
+</div>
 <form method="POST" action="/beans/new">
-    <div>Name: <input type="text" name="name"></div>
-    <div>Type: <input type="text" name="type"></div>
-    <div>How Cool are they?: <input type="number" name="cool"></div>
+    <div>Name: <input type="text" name="name"></div></br>
+    <div>Type: <input type="text" name="type"></div></br>
+    <div>How Cool are they?: <input type="number" name="cool"></div></br>
     <input type="submit">
 </form>
 
