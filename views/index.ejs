@@ -1,0 +1,17 @@
+<h2><%= response.quote %></h2>
+
+<form method="POST" action="/beans/new">
+    <div>Name: <input type="text" name="name"></div>
+    <div>Type: <input type="text" name="type"></div>
+    <div>How Cool are they?: <input type="number" name="cool"></div>
+    <input type="submit">
+</form>
+
+<% beans.forEach(b => { %>
+    <div>
+        <a href='/beans/<%= b.id %>'><%= b.name %></a>
+        <form method="POST" action="/beans/<%= b.id %>?_method=DELETE">
+            <input type="Submit" value="DELETE">
+        </form>
+    </div>
+<% }) %>
